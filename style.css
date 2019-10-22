@@ -7,7 +7,6 @@
 :: Version: v1.0
 :: Created: 11/03/2017
 -------------------------- */
-
 /* --- [Master Stylesheet] ----
 :: 1.0 Base CSS Start
 :: 2.0 Header Area CSS
@@ -24,7 +23,6 @@
 :: 13.0 Contact Area CSS Start
 :: 14.0 Footer Area CSS Start
 -------------------------- */
-
 @import url('https://fonts.googleapis.com/css?family=Cabin:400,500,700|Montserrat:400,500,700');
 @import 'css/bootstrap.min.css';
 @import 'css/animate.css';
@@ -114,6 +112,20 @@ h6 {
 img {
     max-width: 100%;
     max-height: 100%;
+}
+
+img.photo {
+    border-radius: 40px 40px 40px 0px;
+    -webkit-filter: brightness(110%);
+    margin-bottom: 1em;
+}
+
+img.photo:hover {
+    -webkit-box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
+    -webkit-transition-duration: 500ms;
+    -o-transition-duration: 500ms;
+    transition-duration: 500ms;
 }
 
 .mt-15 {
@@ -400,7 +412,7 @@ p {
 .header_area.sticky {
     background-color: #884bdf;
     -webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     height: 70px;
     position: fixed;
     top: 0;
@@ -414,6 +426,7 @@ p {
 .header_area.sticky .menu_area #nav .nav-link {
     padding: 23px 15px;
 }
+
 .header_area.sticky .navbar {
     padding: 0;
 }
@@ -447,8 +460,10 @@ p {
 .welcome-thumb {
     width: 45%;
     position: absolute;
-    bottom: -130px;
-    right: 85px;
+    /*bottom: -130px;*/
+    bottom: 100px;
+    /*right: 85px;*/
+    right: 20px;
     z-index: 9;
 }
 
@@ -584,7 +599,7 @@ p {
 
 .single-special:hover {
     -webkit-box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
-            box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
 }
 
 .single-special p {
@@ -755,7 +770,8 @@ p {
     background: -webkit-gradient(linear, right top, left top, from(#7873ed), to(#a865e1));
     background: -o-linear-gradient(right, #7873ed, #a865e1);
     background: linear-gradient(to left, #7873ed, #a865e1);
-    padding: 180px 0 80px 0;
+    padding: 100px 0 100px 0;
+    margin-top: 2em;
     top: -100px;
 }
 
@@ -879,6 +895,21 @@ p {
     font-size: 18px;
     color: #fb397d;
 }
+
+
+section.schedule {
+    display: none;
+}
+
+.package-selectable p:hover {
+    color: #fb397d;
+    -webkit-transition-duration: 500ms;
+    -o-transition-duration: 500ms;
+    transition-duration: 500ms;
+    cursor: pointer;
+}
+
+
 
 .single-price-plan .plan-button > a {
     background: #726a84;
